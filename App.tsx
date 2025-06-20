@@ -5,23 +5,29 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaView, StyleSheet, Text} from 'react-native';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+        <Text style = {styles.headerText}>React Native Navigation</Text>
+      </SafeAreaView>
+    </NavigationContainer>    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 20,
     flex: 1,
+    padding: 20,
+  },
+  headerText : {
+    fontWeight:'bold',
+    fontSize: 12,
   },
 });
 
