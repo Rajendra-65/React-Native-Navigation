@@ -1,4 +1,3 @@
-import { View,Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TabScreen1 from "./TabScreen1";
 import TabScreen2 from "./TabScreen2";
